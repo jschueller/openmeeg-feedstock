@@ -1,15 +1,19 @@
+build_number_decrement:
+- '0'
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/gcc7,defaults
 channel_targets:
-- conda-forge main
+- conda-forge gcc7
 cxx_compiler:
-- vs2015
+- gxx
+docker_image:
+- conda/c3i-linux-64
 libmatio:
 - '1.5'
 numpy:
-- '1.11'
+- '1.9'
 openblas:
-- 0.2.20
+- 0.3.3
 pin_run_as_build:
   libmatio:
     max_pin: x.x
@@ -18,17 +22,15 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  vc:
-    max_pin: x
   zlib:
     max_pin: x.x
 python:
-- '3.5'
-vc:
-- '14'
+- '3.7'
 zip_keys:
-- - python
-  - vc
-  - cxx_compiler
+- - cxx_compiler
+  - channel_sources
+  - channel_targets
+  - docker_image
+  - build_number_decrement
 zlib:
 - '1.2'
