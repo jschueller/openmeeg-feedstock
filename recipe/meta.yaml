@@ -24,7 +24,6 @@ requirements:
   build:
     - cmake >=3.8
     - {{ compiler('cxx') }}
-
   host:
     - python
     - numpy  # [not win]
@@ -35,7 +34,6 @@ requirements:
     - hdf5 1.8.18|1.8.18.*
     - zlib
     - libmatio
-
   run:
     - python
     - {{ pin_compatible('numpy') }}
