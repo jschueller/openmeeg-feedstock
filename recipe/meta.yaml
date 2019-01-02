@@ -31,7 +31,7 @@ requirements:
     - blas 1.1 {{ variant }}
     - openblas
     - swig
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5
     - zlib
     - libmatio
   run:
@@ -39,7 +39,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - blas 1.1 {{ variant }}
     - openblas
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5
     - zlib
     - libmatio
     - openmp 4.0.*  # [osx]
